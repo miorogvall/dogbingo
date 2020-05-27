@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.scss';
-import Card from './components/Card';
+import CardRow from './components/row/CardRow';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Card name="Sara"  dog="Poodle"/>
+      <CardRow />
+      <CardRow />
+      <CardRow />
+      <CardRow />
+      <CardRow />
       </header>
     </div>
   );

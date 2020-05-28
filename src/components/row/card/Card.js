@@ -24,7 +24,7 @@ class Card extends React.Component {
       </div>;
     } else {
       card = <div className="square">
-      <div className='dog-name checked'>{this.props.breed}</div>
+      <div className='dog-name checked free'>{this.props.breed}</div>
       </div>;
     }
     return card;

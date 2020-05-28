@@ -3,13 +3,12 @@ import Card from './card/Card'
 
 class CardRow extends React.Component {
   render() {
-    let listLength = Object.keys(this.props.data).length;
   return <div className="card-row">
-  <Card breed={this.props.data[Math.floor(Math.random() * listLength)].dog}/>
-  <Card breed={this.props.data[Math.floor(Math.random() * listLength)].dog}/>
-  <Card breed={this.props.data[Math.floor(Math.random() * listLength)].dog}/>
-  <Card breed={this.props.data[Math.floor(Math.random() * listLength)].dog}/>
-  <Card breed={this.props.data[Math.floor(Math.random() * listLength)].dog}/>
+  <Card breed={this.props.data[0]}/>
+  <Card breed={this.props.data[1]}/>
+  <Card breed={this.props.data[2]}/>
+  <Card breed={this.props.data[3]}/>
+  <Card breed={this.props.data[4]}/>
   </div>;
   }
 }

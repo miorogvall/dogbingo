@@ -2,68 +2,33 @@ import React from 'react';
 import './App.scss';
 import CardRow from './components/row/CardRow';
 
-const json = {
-  "breeds": {
-    0: {
-      "dog": "labrador",
-      "chosen": false
-    },
-    1: {
-      "dog": "bichon frise",
-      "chosen": false
-    },
-    2: {
-      "dog": "pitbull",
-      "chosen": false
-    },
-    3: {
-      "dog": "jack russel",
-      "chosen": false
-    },
-    4: {
-      "dog": "poodle",
-      "chosen": false
-    },
-    5: {
-      "dog": "st bernard",
-      "chosen": false
-    },
-    6: {
-      "dog": "wolfdog",
-      "chosen": false
-    },
-    7: {
-      "dog": "corgi",
-      "chosen": false
-    },
-    8: {
-      "dog": "shar pei",
-      "chosen": false
-    },
-    9: {
-      "dog": "akita",
-      "chosen": false
-    },
-    10: {
-      "dog": "new dog",
-      "chosen": false
-    },
-  }
-}
+let dogList = ['labrador','bichon frise','pitbull','wolfdog','jack russel','poodle','st bernard','wiener dog', 'bulldog', 'Boxer', 'Pomeranian', 'Pug', 'Cocker Spaniel', 'Border Collie', 'Shiba inu', 'Akita', 'Dalmatian', 'Whippet', 'Corgi', 'Chow Chow', 'Basenji', 'Shih Tzu', 'Rottweiler', 'Malteser', 'Grand Danois']
 
 function App() {
-  console.log(json)
+  shuffle(dogList)
+  console.log(dogList)
+  dogList[12] = 'FREE';
   return (
     <div className="App">
       <header className="App-header">
-      <CardRow data={json.breeds}/>
-      <CardRow data={json.breeds}/>
-      <CardRow data={json.breeds}/>
-      <CardRow data={json.breeds}/>
-      <CardRow data={json.breeds}/>
+      <CardRow data={dogList.slice(0, 5)}/>
+      <CardRow data={dogList.slice(5, 10)}/>
+      <CardRow data={dogList.slice(10, 15)}/>
+      <CardRow data={dogList.slice(15, 20)}/>
+      <CardRow data={dogList.slice(20, 25)}/>
       </header>
     </div>
   );
+}
+
+function shuffle(arr) {
+  var i = arr.length, k , temp;      // k is to generate random index and temp is to swap the values
+  while(--i > 0){
+    k = Math.floor(Math.random() * (i+1));
+    temp = arr[k];
+    arr[k] = arr[i];
+    arr[i] = temp;
+  }
 }
 
 export default App;

@@ -1,8 +1,26 @@
 @import './master.scss';
 
 body {
-  background-color: #8EC5FC;
-    background-image: linear-gradient(99deg, #8EC5FC 0%, #E0C3FC 100%);
+  font-family: 'Manrope', sans-serif;
+  background: linear-gradient(233deg, rgba(200, 103, 87, 0.2), rgba(200, 193, 87, 0.2), rgba(108, 200, 87, 0.2), rgba(87, 200, 156, 0.2), rgba(87, 154, 200, 0.2), rgba(87, 104, 200, 0.2), rgba(164, 87, 200, 0.21), rgba(200, 87, 186, 0.2), rgba(200, 87, 146, 0.2));
+  background-size: 1800% 1800%;
+  animation: AnimationName 29s ease infinite;
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 51%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 51%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 51%}
+      100%{background-position:0% 50%}
+  }
 }
 
 .App-header {

@@ -22,7 +22,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 11px;
+        font-size: 2.5vw;
         padding: 7px;
         word-break: break-word;
         font-family: 'Manrope', sans-serif;
@@ -36,17 +36,13 @@
             background: #66fb7f;
             &:after {
                 content: "✓";
-                top: -6px;
-                right: 0px;
                 position: absolute;
-                margin-top: 5px;
-                margin-right: 5px;
-                font-size: 73px;
-                color: #195f1c29;
+                font-size: 69px;
+                color: rgba(25, 95, 28, 0.08);
             }
         }
         &.free {
-            font-size: 22px;
+            font-size: 4vw;
             font-weight: bold;
         }
     }

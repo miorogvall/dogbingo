@@ -20,11 +20,14 @@ class Card extends React.Component {
     let card;
     if(this.props.breed !== "FREE") {
       card = <div className="square">
-      <div className={!this.state.isToggleOn ? 'dog-name' : 'dog-name checked'} onClick={this.handleClick.bind(this)}>{this.props.breed}</div>
+      <div className={!this.state.isToggleOn ? 'dog-name' : 'dog-name checked'}
+      data-card-number={this.props.cardNumber} 
+      onClick={this.handleClick.bind(this)}>{this.props.breed}</div>
       </div>;
     } else {
       card = <div className="square">
-      <div className='dog-name checked free'>{this.props.breed}</div>
+      <div className='dog-name checked free' 
+      data-card-number={this.props.cardNumber}>{this.props.breed}</div>
       </div>;
     }
     return card;

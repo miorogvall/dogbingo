@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <CardRow data={dogList.slice(0, 5)}/>
-      <CardRow data={dogList.slice(5, 10)}/>
-      <CardRow data={dogList.slice(10, 15)}/>
-      <CardRow data={dogList.slice(15, 20)}/>
-      <CardRow data={dogList.slice(20, 25)}/>
+      <CardRow data={dogList.slice(0, 5)} cardNumbers={[1,2,3,4,5]}/>
+      <CardRow data={dogList.slice(5, 10)} cardNumbers={[6,7,8,9,10]}/>
+      <CardRow data={dogList.slice(10, 15)} cardNumbers={[11,12,13,14,15]}/>
+      <CardRow data={dogList.slice(15, 20)} cardNumbers={[16,17,18,19,20]}/>
+      <CardRow data={dogList.slice(20, 25)} cardNumbers={[21,22,23,24,25]}/>
       </header>
     </div>
   );

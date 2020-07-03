@@ -13,8 +13,27 @@ class Card extends React.Component {
       this.setState(state => ({
         isToggleOn: !state.isToggleOn,
       }));
-      this.checkBingo()
-      console.log(gameState)
+
+      let checkedBoxes = window.localStorage.dogGame.split(',')
+      let isInArray = checkedBoxes.filter(number => number == this.props.cardNumber);
+      console.log(checkedBoxes.filter(number => number == this.props.cardNumber))
+
+      if(isInArray.length > 0) {
+        window.gameState[this.props.cardNumber] = !this.state.isToggleOn;
+      localStorage.setItem("dogGame", localStorage.getItem("dogGame")+`${this.props.cardNumber},`);
+      console.log('was in array')
+      } else {
+        window.gameState[this.props.cardNumber] = !this.state.isToggleOn;
+        let value = this.props.cardNumber;
+        let result = checkedBoxes.filter(x => x !== value);
+        console.log(result);
+        localStorage.setItem('dogGame', result)
+        console.log('was not array')
+      }
+      
+      console.log(window.localStorage.dogGame)
+      this.checkBingo(window.gameState)
+/*       console.log(window.localStorage.dogGame.split(',')) */
   }
 
   checkBingo(gameState) {
